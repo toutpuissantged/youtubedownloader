@@ -1,0 +1,16 @@
+@font-face {
+    font-family: 'MyWebFont';
+    src: url('../fonts/Itim-Regular.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+  }  
+
+h1{
+    font-family: MyWebFont;
+    text-align: center;
+    padding: 20px;
+    
+    color: white;
+
+}
+body{
+    background: #006a91;
+}

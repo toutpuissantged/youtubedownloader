@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="author" content="colorlib.com">
+    <link rel="stylesheet" href="../static/css/self.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400" rel="stylesheet" />
+    <link href="../static/css/main.css" rel="stylesheet" />
+    <style>
+        #tubeImg{
+            border-radius: 5px;
+            align-self: center;
+        }
+        .container{
+            padding: 5px;
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            background-color: rgba(165, 42, 42, 0);
+
+        }
+        .d-panel{
+            padding: 20px;
+            align-self: center;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: white;
+            font-weight: 700;
+            font-size: large;
+            background-color: rgba(0, 0, 20, 0.247);
+        }
+        h3,.errorT{
+            align-self: center;
+            color: white;
+            font-size: larger;
+            text-align: center;
+            font-family: MyWebFont;
+
+        }
+        .errorT{
+          color: rgb(180, 25, 25);
+        }
+        #input{
+          margin: -50%;
+          
+        }
+        button{
+            border-style: none;
+            padding: 10px;
+            border-radius: 3px;
+            background-color: blue;
+            color: white;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        form{
+          margin-bottom: -50%;
+        }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>youtube downloader</h1>
+      {% if ud[0] !='none' %}
+      <div class="container">
+        <img src="{{ ud[1] }}" alt="" srcset="" width="50%" id="tubeImg">
+        <h3> {{ ud[0] }} </h3>
+        <div class="d-panel">
+            <label for=""> 720p </label>
+            <a href="{{ ud[2] }}" download>
+               download
+            </a>
+        </div>
+      </div>
+    {% else %}
+    <h3 class="errorT"> Video Non trouver !!! </h3>
+    {% endif %}
+    </div>
+    <div class="s128">
+      
+      <form action="search" method="GET" > 
+        <div class="inner-form">
+          <div class="row">
+            <div class="input-field second">
+              <input type="search" placeholder="Coller votre Url" name="query" id="input" />
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</html>
